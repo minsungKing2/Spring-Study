@@ -3,7 +3,7 @@ package hello.hello_spring.domain;
 public class Member {
 
     private Long id; //시스템이 저장하는 아이디
-    private String name;
+    private String name; //이름
 
     public Long getId() {
         return id;
