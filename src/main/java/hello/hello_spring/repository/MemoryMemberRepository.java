@@ -3,12 +3,9 @@ package hello.hello_spring.repository;
 import hello.hello_spring.domain.Member;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
-//@Repository
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
@@ -34,11 +31,11 @@ public class MemoryMemberRepository implements MemberRepository {
     }
 
     @Override
-    public ArrayList<Member> findAll() {
+    public List<Member> findAll() {
         return new ArrayList<>(store.values()); //member들이 반환됨.
     }
 
-    public void clearStore(){
+    public void clearStore() {
         store.clear(); // store 비워줌
     }
 }
