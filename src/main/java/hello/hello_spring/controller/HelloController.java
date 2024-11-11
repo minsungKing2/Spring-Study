@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller // Spring은 컨트롤러 만들때 해줘야됨.
 public class HelloController {
 
-    @GetMapping("hello") // /hello가 들어오면, 이 메서드를 호출시켜줌.
+    @GetMapping("hello") // hello가 들어오면, 이 메서드를 호출시켜줌.
     public String hello(Model model){ // MVC의 model임.
         model.addAttribute("data","hello!!"); // 키, 속성
         return "hello";
